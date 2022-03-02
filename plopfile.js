@@ -1,6 +1,4 @@
-import { NodePlopAPI } from "plop";
-
-export default function (plop: NodePlopAPI) {
+export default function (plop) {
   plop.setGenerator("controller", {
     description: "application controller logic",
     prompts: [
