@@ -27,12 +27,27 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
+type ButtonFormat = "primary" | "secondary" | "tertiary";
 
 enum ButtonSize {
   Small = 100,
   Medium = 200,
   Large = 300,
 }
+
+type example = Record<ButtonSize, ButtonFormat[]>;
+
+const convertIntoSizeObject = (): example => {
+  const ButtonState: any = {};
+  for (let size in ButtonSize) {
+    console.log(size);
+
+    if (Object.prototype.toString.call(size) === "[object String]") {
+      ButtonState[size] = [];
+    }
+  }
+  return ButtonState;
+};
 
 export const Button = ({
   primary = false,
@@ -41,7 +56,7 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  console.log(ButtonSize);
+  // console.log(convertIntoSizeObject());
 
   const mode = primary
     ? "storybook-button--primary"
