@@ -32,7 +32,6 @@ type ButtonFormat = "primary" | "secondary" | "tertiary";
 enum ButtonSize {
   Small = 100,
   Medium = 200,
-  Large = 300,
 }
 
 type example = Record<ButtonSize, ButtonFormat[]>;
