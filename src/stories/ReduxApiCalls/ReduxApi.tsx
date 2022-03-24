@@ -4,5 +4,8 @@ import { Button } from "../Button";
 export interface IApiCallProps {}
 
 export function ApiCall(props: IApiCallProps) {
-  return <Button label={"ApiCall"} />;
+  const handleOnClick = () => {
+    console.log("Button clicked");
+  };
+  return <Button onClick={handleOnClick} label={"ApiCall"} />;
 }
