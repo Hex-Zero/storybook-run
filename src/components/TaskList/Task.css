@@ -1,0 +1,30 @@
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: aliceblue;
+}
+
+.checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+}
+
+.list-item.TASK_INBOX .checkbox {
+  background-color: rgb(255, 255, 255);
+}
+
+.list-item.TASK_PINNED .checkbox {
+  background-color: rgb(211, 154, 154);
+}
+
+.list-item.TASK_ARCHIVED .checkbox {
+  background-color: rgb(0, 158, 21);
+}
