@@ -12,28 +12,22 @@ const Template: ComponentStory<typeof Task> = (args) => <Task {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  task: {
-    id: "1",
-    title: "Test Task",
-    state: TaskState.TASK_INBOX,
-    updatedAt: new Date(2021, 0, 1, 9, 0),
-  },
+  id: "1",
+  title: "Test Task",
+  state: TaskState.TASK_INBOX,
+  updatedAt: new Date(2021, 0, 1, 9, 0),
 };
 
 export const Pinned = Template.bind({});
 Pinned.args = {
-  task: {
-    id: "2",
-    ...Default.args.task,
-    state: TaskState.TASK_PINNED,
-  },
+  id: "2",
+  ...Default.args,
+  state: TaskState.TASK_PINNED,
 };
 
 export const Archived = Template.bind({});
 Archived.args = {
-  task: {
-    id: "3",
-    ...Default.args.task,
-    state: TaskState.TASK_ARCHIVED,
-  },
+  id: "3",
+  ...Default.args,
+  state: TaskState.TASK_ARCHIVED,
 };

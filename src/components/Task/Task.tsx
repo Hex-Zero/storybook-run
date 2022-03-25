@@ -9,18 +9,18 @@ export enum TaskState {
 }
 
 export interface ITaskProps {
-  task: {
-    id: string;
-    title?: string;
-    state?: TaskState;
-    updatedAt?: Date;
-  };
+  id: string;
+  title?: string;
+  state?: TaskState;
+  updatedAt?: Date;
   onArchiveTask: (id: string) => void;
   onPinTask: (id: string) => void;
 }
 
 export default function Task({
-  task: { id, title, state },
+  id,
+  title,
+  state,
   onArchiveTask,
   onPinTask,
 }: ITaskProps) {
